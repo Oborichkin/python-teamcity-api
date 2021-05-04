@@ -1,5 +1,7 @@
+SHELL := $(shell echo $$SHELL)
+
 test: venv
-	$(VENV)/python pyTeamCity/main.py
+	source .secrets && $(VENV)/python -m pyTeamCity
 
 include Makefile.venv
 Makefile.venv:
